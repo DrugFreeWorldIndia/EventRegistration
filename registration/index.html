@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Registration</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .top-bar {
+      background-color: #317882;
+      padding: 1px 0;
+      text-align: center;
+      color: #fff;
+    }
+    
+    .top-bar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .website-link {
+      font-weight: bold;
+      color: #317882;
+    }
+    .web{
+      font-weight: bold;
+      color: white;
+    }
+    .contact-us {
+      font-style: italic;
+    }
+    
+    header {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-family: initial;
+    }
+    
+    .logo {
+      width: 300px;
+      display: block;
+      margin: 0;
+      margin-left: 20px;
+    }
+    
+    h1, h2, p {
+      color: black;
+      margin-top: 0;
+    }
+    
+    section {
+      text-align: center;
+      margin: 5px auto;
+    }
+    
+    .register-button {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 10px 30px;
+      background-color: #317882;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 20px;
+    }
+    
+    .register-button:hover {
+      background-color: #000;
+      color: #fff;
+    }
+    
+    .image-collage {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 20px;
+      background-color: #317882;
+    }
+    
+    .image-collage img {
+      max-width: 200px;
+      margin-bottom: 10px;
+    }
+    
+    footer {
+      background-color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      color: #317882;
+    }
+    
+    .competition-details {
+
+  text-align: left;
+ /* width: 1200px; */
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 1px;
+  margin-right: 200px;
+}
+
+
+.competition-details h2 {
+  color: #317882;
+  margin-top: 0;
+}
+
+.competition-details p {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .competition-details {
+    margin: 20px auto;
+  }
+}
+    .competition-details h3 {
+      margin-top: 0;
+    }
+
+
+
+    .centered-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .centered-icons a {
+    display: inline-block;
+    margin: 0 10px;
+  }   
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -0.8px; 
+      align-items: center;
+      width:70%;
+    
+  }
+
+  .top-bar .social-icons a {
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  /* Adjust the size of the social media icons */
+  .social-icons a img {
+    width: 25px; /* Adjust the size as needed */
+  }
+
+  .website-link {
+    font-weight: bold;
+  }
+
+  .contact-us {
+    font-style: italic;
+  }
+
+  /* Add your CSS styles here for the social media icons at the center of the page */
+  .centered-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .centered-icons a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .join-us-section {
+   
+  
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin: 20px auto;
+  }
+  
+  .join-us-section h2 {
+    font-family: 'Arial Black', sans-serif;
+    color: #317882;
+    margin-top: 0;
+  }
+  
+  .join-us-section p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .join-us-section a {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #317882;
+    text-decoration: none;
+    margin-top: 10px;
+    font-family: 'Arial Black', sans-serif;
+  }
+  
+  .join-us-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .more-info-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin: 20px auto;
+  }
+  
+  .more-info-section p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .more-info-section a {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #317882;
+    text-decoration: none;
+    margin-top: 10px;
+    font-family: 'Arial Black', sans-serif;
+  }
+  
+  .more-info-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .join-us-text {
+    animation: blink 3s infinite;
+    
+  }
+
+  @keyframes blink {
+    0% {
+      color: #317882;
+    }
+    50% {
+      color: #f5f5f5;
+    }
+  }
+ 
+
+  .more-about-us-section {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .more-about-us-heading {
+text-align: left;
+   
+    margin-bottom: 10px;
+    color: #317882;
+    
+  }
+  
+  .more-about-us-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+      
+  .more-about-us-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+  }
+  
+  .more-about-us-images img {
+    max-width: 200px;
+    height: auto;
+  }
+
+  .more-about-us-images img:nth-child(1) {
+    max-width: 300px;
+    max-height: 600px;
+  }
+
+  .more-about-us-images img:nth-child(2) {
+    max-width: 250px;
+    max-height: 400px;
+  }
+  
+.accordion{
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #317882;
+    border-radius: 10px;
+    margin-left: 0px;
+    width: 700px;
+    
+}
+.accordion__question p{
+    margin: 5px;
+    padding: 0;
+    font-family: Verdana;
+    font-size: 20px;
+    color:white ;
+    margin-left: 0%;
+    text-align: left;
+   
+}
+.accordion__answer p{
+    margin: 5px;
+    padding: 10px;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #317882;
+    background: white;
+    border-radius: 10px; 
+    text-align: left;
+}
+.accordion:hover{
+    cursor: pointer;
+}
+.accordion__answer {
+    display: none;
+} 
+.accordion.active .accordion__answer {
+    display: block;
+}
+
+
+.layout {
+  width: 600px;
+  margin: auto;
+  margin-left: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: left; 
+}
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-content">
+      <span 
+      class="website-link">
+        <a href="https://www.drugfreeworldindia.org/" class="web">www.drugfreeworldindia.org</a>
+      </span>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/drugfreeworldindia"><img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-facebook-social-media-icon-png-image_6315968.png" alt="Facebook"></a>
+        <a href="#"><img src="twi.png" alt="Twitter"></a>
+        <a href="https://instagram.com/drugfreeworldindia?igshid=MTI1ZDU5ODQ3Yw==
+        "><img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="Instagram"></a>
+        <a href="https://youtube.com/@drug-freeworldindia4003"><img src="vt.jpg" alt="youtube"></a>
+      </div>
+      <span class="contact-us">contactusdrugfreeworld.org</span>
+    </div>
+  </div>
+
+  <header>
+    <img src="logo.png" alt="Logo" class="logo">
+    
+    <img src ="ShowImage1.jpeg" class = "headd">
+    <h1>PAINTING COMPETITION</h1>
+    <p>Join us for an amazing event!</p>
+  </header>
+
+  <section>
+    <!-- <h2>Register Now</h2> -->
+    <a href="https://forms.gle/3j89mWnvpsiCVayk8" class="register-button">Register Here</a>
+    
+    <div class="image-collage left">
+      <!-- Add your left images here -->
+      <img src="k2.jpeg" alt="Image 1" style="height: 200px;">
+      <img src="k1.jpeg" alt="Image 2" style="height: 200px;">
+      <img src="j5.jpg" alt="Image 3">
+      <img src="v.jpg" alt="Image 4" height="200px">
+    </div>
+
+    <div class="image-collage right">
+      <!-- Add your right images here -->
+      <img src="j2.jpeg" alt="Image 5" style="height: 200px;">
+      <img src="j3.jpeg" alt="Image 6" style="height: 200px;">
+      <img src="j6.jpeg" alt="Image 7">
+    </div>
+  </section>
+<br>
+  <h2 style=" margin-left: 20px; color: #317882;">Competition Details:</h2>
+
+  <div class="competition-details">
+    <!-- <h3>Competition Details:</h3> -->
+    <p><strong>1.Eligibility:</strong> Between 13 - 18 years of age.</p>
+    <p><strong>2.Theme:</strong> "My Vision of a Drug-Free World"</p>
+    <p><strong>3.Format:</strong>A3 size sheet.</p>
+   
+    <p><strong>4.Submission:</strong> All participants have to submit their entry in the form provided by 20 July, 2023.You may also send your painting to our office through courier.</p>
+    <!-- <p><strong>FDFWI Office Address:</strong> 2/13A Jungpura, Block A, New Delhi - 110014</p>
+    
+ Participants can submit their entry in the form provided to them after registration.
+    <p><strong>Winners Announcement:</strong> The winners will be announced on 26th June, 2023, on our official handles and will be contacted individually.</p> -->
+    <p><strong>5.Prize:</strong> All participants will receive an e-certificate of participation.</p>
+         <p>There will be a different prize pool for differently-abled students.</p>
+         <p><strong>Top 5 performers will receive an internship opportunity from us</strong></p>
+    <ul>
+      <li>1st Prize: Certificate and cash prize of Rs. 1500</li>
+      <li>2nd Prize: Certificate and cash prize of Rs. 1200</li>
+      <li>3rd Prize: Certificate and cash prize of Rs. 1000</li>
+    </ul>
+  </div>
+
+<br>
+  <h2 style="color:#317882; text-align:left;margin-left: 20px; ">FAQ's</h2>
+  <section class="faq-section">
+    <div class="layout">
+      <div class="accordion">
+        <div class="accordion__question">
+          <p>Q: How to get registration ID?</p>
+        </div>
+        <div class="accordion__answer">
+          <p>A: After registering, participants will get all the relevant information such as registration ID,and so on.</p>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion__question">
+          <p>Q: Is there a registration fee for the competition?</p>
+        </div>
+        <div class="accordion__answer">
+          <p>
+            A: Yes, the registration fee for each participant is INR 400.
+          </p>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion__question">
+          <p>Q: How will the winners be selected?</p>
+        </div>
+        <div class="accordion__answer">
+          <p>A: Winners will be selected by a panel of judges based on creativity, technique, and adherence to the theme.</p>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion__question">
+          <p>Q: How to submit my painting?</p>
+        </div>
+        <div class="accordion__answer">
+          <p>A: Participants can submit their entry in the form provided to them after registration.</p>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion__question">
+          <p>Q: Can anyone participate in the painting competition?</p>
+        </div>
+        <div class="accordion__answer">
+          <p>A: No, the competition is only open to people between the ages of 13 to 18.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="more-about-us-section">
+    <h2 class="more-about-us-heading" >More About Us</h2>
+    <div class="more-about-us-images">
+      <img src="i1.png" alt="Image 1" style="max-width: 500px;  height: 306px;">
+      <img src="i2.png" alt="Image 2" style="max-width: 500px;height: 300px;">
+    </div>
+  </section>
+  
+  <section class="join-us-section">
+    <h2><strong><span class="join-us-text">JOIN US</span></strong></h2>
+    <p>Sign up and register yourself to become a volunteer</p>
+    <a href="https://www.drugfreeworldindia.org/">https://www.drugfreeworldindia.org/</a>
+  </section>
+  
+  <section class="more-info-section">
+    <p>For more information on drugs, visit:</p>
+    <a href="https://www.drugfreeworld.org/course/">https://www.drugfreeworld.org/course/</a>
+  </section>
+  
+  
+  <footer>
+    <p style="font-size: 12px;">&copy; 2023 Drug Free World India. All rights reserved.</p>
+    
+    <p class="contact-us" style="font-size:10px ;">Contact us: info@drugfreeworldindia.org</p>
+  </footer>
+  
+  <script>
+    let answers = document.querySelectorAll(".accordion");
+    answers.forEach((event) => {
+      event.addEventListener('click', () => {
+        if (event.classList.contains("active")) {
+          event.classList.remove("active");
+        } else {
+          event.classList.add("active");
+        }
+      })
+    })
+  </script>
+  
+</body>
+</html>
